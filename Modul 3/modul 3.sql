@@ -48,7 +48,41 @@ SELECT 5=5, 5!=5, 5!=4;
 SELECT POW(3,2), ROUND(3,14), ROUND(3,54), ROUND(3,155, 1),
 ROUND (3,155,2), FLOOR(4,28), FLOOR(4,78), CELING(4,39), CELING(4,55);
 
--- Praktek 9
-SELECT NOW(), YEAR('2022-05-03'),
+-- PRAKTEK 9
+-- Fungsi tanggal
+SELECT 
+    NOW() AS waktu_sekarang,
+    YEAR('2022-05-03') AS tahun,
+    MONTH('2022-05-03') AS bulan,
+    DAY('2022-05-03') AS hari,
+    DATEDIFF(NOW(), '2022-05-03') AS selisih_hari;
 
-DAY('2022-05-03);
+-- Penjelasan:
+-- NOW()      = tanggal dan waktu sekarang
+-- YEAR()     = mengambil tahun
+-- MONTH()    = mengambil bulan
+-- DAY()      = mengambil hari
+-- DATEDIFF() = menghitung selisih hari
+
+
+-- LATIHAN MANDIRI DARI SLIDE
+
+-- Operator matematika
+SELECT 4 * 2;
+SELECT (4 * 8) % 7;
+SELECT (4 * 8) MOD 7;
+
+-- Operator perbandingan
+SELECT 1 = TRUE;
+SELECT 1 = FALSE;
+SELECT 5 >= 5;
+SELECT 5.2 = 5.20000;
+SELECT NULL = 1;
+SELECT NULL = NULL;
+
+-- Fungsi tanggal
+SELECT DATEDIFF('2022-07-23', NOW());
+SELECT YEAR('2022-07-23');
+SELECT MONTH('2022-07-23');
+SELECT DAY('2022-07-23');
+SELECT YEAR(NOW());
