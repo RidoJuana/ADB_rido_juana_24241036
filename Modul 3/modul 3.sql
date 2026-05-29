@@ -86,3 +86,51 @@ SELECT YEAR('2022-07-23');
 SELECT MONTH('2022-07-23');
 SELECT DAY('2022-07-23');
 SELECT YEAR(NOW());
+
+Praktik 10
+SELECT detediff(now() , tgl_transaksi) FROM tr_penjual;
+SELECT detediff(tgl_transaksi, now()) FROM tr_penjual;
+-- WHERE 
+-- untuk memfilter atau menyaring data
+
+-- PRAKTEK 11 
+-- Ambil semua data pada kolom nama produk dan qty, yang qty > 3
+SELECT nama_produk, qty
+FROM tr_penjualan
+WHERE qty > 3;
+
+-- Ambil semua data pada kolom nama produk dan harga , harga max 10000
+SELECT nama_produk, harga
+FROM tr_penjual
+WHERE 
+
+
+
+-- Praktek 12 
+-- Multi kriteria dalam WHERE 
+SELECT nama_produk, qty, tgl_transaksi FROM tr_penjualan;
+- Ambil semua produk dan qty yang qty > 3 DAN transaksi pada bulan 6
+SELECT nama_produk, qty
+FROM tr_penjualan
+WHERE qty > 3 AND month(tgl_transaksi) = 6;
+
+-- Praktek 13
+-- WHERE dengan kriteria Teks
+-- Ambil semua nama_produk yang bernama 'Flashdisk DQLab 32 GB'
+SELECT nama_produk, qty
+FROM tr_penjualan
+WHERE nama_produk = 'Flashdisk DQLab 32 GB'
+
+-- Praktek 14
+-- WHERE dengan operator LIKE
+-- Ambil semua nama_produk yang namanya berawal huruf 'F'
+SELECT nama_produk FROM tr_penjual
+WHERE nama_produk LIKE 'F%' ;
+
+-- Latihan Mandiri
+
+-- Praktek 15
+-- WHERE dengan Operator Perbandingan (AND, OR, NOT, XOR)
+-- Ambil nama_produk yang berawalan huruf 'f%' dan qty > 2
+SELECT nama_produk, qty FROM tr_penjualan
+WHERE nama_produk LIKE 'F%' AND qty > 2;
