@@ -1,5 +1,5 @@
--- Nama : Sofian hafiz
--- Nim 	: 24241003
+-- Nama : Rido juana
+-- Nim 	: 24241036
 -- Kelas : A 
 -- Modul : 5
 
